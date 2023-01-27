@@ -1,0 +1,45 @@
+---
+title: "make_art"
+output: html_document
+date: "2023-01-27"
+---
+The function is designed to create random art. A random number as the argument 
+can be used as a seed to draw reproducible results. 
+
+```{r setup, include=FALSE}
+make_art <- function(seed) {
+  set.seed(seed)
+  mydata <- runif(700,min = 0,max = 1)
+  mydata2 <- rexp(700, 1)
+  mydata3 <- mydata*pi
+  plot(mydata2, mydata3, type = "l")
+  }
+```
+
+For example, if the input is 123, then the output would be: 
+
+
+```{r cars}
+make_art <- function(seed) {
+  set.seed(seed)
+  mydata <- runif(700,min = 0,max = 1)
+  mydata2 <- rexp(700, 1)
+  mydata3 <- mydata*pi
+  plot(mydata2, mydata3, type = "l")
+  }
+make_art(123)
+```
+if the input is 777, then the output would be
+
+
+```{r pressure, echo=FALSE}
+make_art <- function(seed) {
+  set.seed(seed)
+  mydata <- runif(700,min = 0,max = 1)
+  mydata2 <- rexp(700, 1)
+  mydata3 <- mydata*pi
+  plot(mydata2, mydata3, type = "l")
+  }
+make_art(777)
+```
+
